@@ -77,7 +77,16 @@ $breakpoint-miniphone:500px;
     border: 1px solid rgba(77, 115, 248, 0.15);
     padding: $base-gap;
     border-radius: $base-gap/3;
-
+ @media(max-width: $breakpoint-minipc){
+      grid-template-columns:1fr 1fr 1fr ;
+    }
+    @media(max-width: $breakpoint-tablet){
+      grid-template-columns:1fr 1fr ;
+    }
+    @media(max-width: $breakpoint-minitab){
+      display:flex  ;
+      flex-direction:column;
+    }
 
     .image {
         width: 222px;
@@ -96,6 +105,10 @@ $breakpoint-miniphone:500px;
 
     .profile-content {
         line-height: 15px;
+        @media(max-width: $breakpoint-minitab){
+            line-height:normal;
+            text-align:center;
+        }
 
         h2 {
             font-style: normal;
@@ -121,7 +134,12 @@ $breakpoint-miniphone:500px;
         .section {
             display: flex;
             gap: $base-gap;
-
+ @media(max-width: $breakpoint-minitab){
+      display:flex  ;
+      flex-direction:column;
+      justify-content:center;
+      
+    }
             .stat {
                 padding: $base-gap/3;
                 width: 150px;
@@ -129,6 +147,9 @@ $breakpoint-miniphone:500px;
                 border-radius: 4px;
                 text-align: center;
                 line-height: $base-gap/3;
+                @media(max-width: $breakpoint-minitab){
+                    width:92%;
+                }
             }
 
         //     .socials {}

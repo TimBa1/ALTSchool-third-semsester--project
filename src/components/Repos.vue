@@ -99,13 +99,18 @@ $breakpoint-miniphone:500px;
     font-size: 30px;
     color: $text-color;
   }
-
+p{
+  color:rgba(255, 255, 255, 0.6)
+}
   .repo {
     padding: 20px;
     display: grid;
     gap: $base-gap;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
+    @media(max-width: $breakpoint-minitab){
+      justify-content:center;
+    }
 
     .link {
       text-decoration: inherit;
@@ -139,13 +144,14 @@ $breakpoint-miniphone:500px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color:rgba(255, 255, 255, 0.6);
 
         .fa-layer-group {
-          color: $primary;
+          color :rgba(255, 255, 255, 0.6);
         }
 
         .id {
-          color: #616161;
+          color: rgba(255, 255, 255, 0.6);
         }
       }
 
@@ -156,7 +162,7 @@ $breakpoint-miniphone:500px;
         font-size: 15px;
 
         .fa-circle-dot {
-          color: $primary;
+          color: rgba(255, 255, 255, 0.6);
         }
       }
     }
