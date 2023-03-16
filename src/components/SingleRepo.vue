@@ -1,7 +1,7 @@
 <template>
     <div class="repos-container">
         <div class="repos">
-            <p @click="redirectToHome" class="btn">Back</p>
+            <p @click="redirectToHome" class="btn">X</p>
             <h1>{{ repo.name }}</h1>
             <p class="desc">{{ repo.description }}</p>
             <div class="space">
@@ -51,10 +51,14 @@ export default {
 @use 'sass:math';
 
 /* variables*/
-$primary: #4D73F8;
+$primary:#4db5ff ;
 $base-gap: 30px;
-$text-color: #020C18;
-$background: #ffffff;
+$text-color:#4db5ff ;
+$background: #2c2c6c;
+$breakpoint-minipc:1500px;
+$breakpoint-tablet:1350px;
+$breakpoint-minitab:800px;
+$breakpoint-phone:600px;
 $breakpoint-miniphone:500px;
 
 
@@ -62,7 +66,7 @@ $breakpoint-miniphone:500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30vh 0;
+
 
 
 
@@ -91,7 +95,7 @@ $breakpoint-miniphone:500px;
 
         .desc {
             text-align: center;
-            color: #616161;
+            color:rgba(255, 255, 255, 0.6);
         }
 
         .space {
@@ -110,6 +114,9 @@ $breakpoint-miniphone:500px;
                 font-size: 16px;
 
             }
+            p{
+                color:rgba(255, 255, 255, 0.6);
+            }
         @media(max-width : $breakpoint-miniphone){
             justify-content: center;
             gap: $base-gap/3;
@@ -118,7 +125,7 @@ $breakpoint-miniphone:500px;
 
         .links{
             text-decoration: none;
-            color: $primary;
+            color: rgba(255, 255, 255, 0.6);
             font-size: 17px;
 
             &:hover{
