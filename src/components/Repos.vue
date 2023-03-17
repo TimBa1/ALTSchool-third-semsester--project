@@ -1,5 +1,14 @@
 <template>
   <div class="container">
+  <div class='stats-new'>
+  <h2>About Me</h2>
+     TimBa1/README.md<br/>
+👋 Hi, I’m @TimBa1<br/>
+👀 I’m interested in new innovative means of doing things<br/>
+🌱 I’m currently a freelancing front end developer<br/>
+💞️ I’m looking to collaborate on new project and learning new things, because learing never stops<br/>
+📫 How to reach @ timilehinbakare.tb@gmail.com<br/>
+  </div>
     <h1 className="repo-header">Repositories</h1>
     <ul class="repo">
       <li class="repo-container" v-for="repo in paginatedRepositories" :key="repo.id">
@@ -20,12 +29,12 @@
     </ul>
     <div class="btn-container">
       <button @click="currentPage--" :disabled="currentPage === 1" :class="{ disabled: currentPage === 1 }">
-        Prev
+        -
       </button>
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button @click="currentPage++" :disabled="currentPage === totalPages"
         :class="{ disabled: currentPage === totalPages }">
-        Next
+      +
       </button>
     </div>
   </div>
@@ -98,9 +107,25 @@ $breakpoint-miniphone:500px;
     font-weight: 700;
     font-size: 30px;
     color: $text-color;
+    margin-left:2rem;
+    
+     @media(max-width: $breakpoint-minitab){
+      margin:2rem 0 1rem 0;
+
+     }
   }
 p{
   color:rgba(255, 255, 255, 0.6)
+}
+.stats-new{
+  margin-left:2rem;
+   color:rgba(255, 255, 255, 0.6);
+    @media(max-width: $breakpoint-minitab){
+      margin:0;
+    }
+  h2{
+   color:$text-color;
+  }
 }
   .repo {
     padding: 20px;
@@ -182,11 +207,11 @@ p{
 
     button {
       margin: $base-gap/3;
-      background: $primary;
+    background-color: #1f1f38 ;
       border: none;
       border-radius: 10px;
       padding: 10px 20px;
-      color: $background;
+      color: $text-color;;
 
       &:hover {
         background: rgba(77, 115, 248, 0.5);
